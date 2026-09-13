@@ -128,7 +128,6 @@ python prepare_data.py
 ```bash
 streamlit run app.py
 ```
-*Access the local web dashboard at `http://localhost:8501`.*
 
 ---
 
