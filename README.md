@@ -1,4 +1,4 @@
-# ⚛️ Q-Triage: Hybrid Quantum ML for Early Disease Detection
+# Hybrid Quantum ML for Early Disease Detection
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![PennyLane](https://img.shields.io/badge/PennyLane-0.34+-purple.svg)](https://pennylane.ai/)
@@ -6,24 +6,24 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-FF4B4B.svg)](https://streamlit.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> **Smart India Hackathon | PS ID: SIH26139 | Sponsor: Egreen Quanta**  
-> **Team: Ninth Quadrant**  
-> **Repository:** [https://github.com/Anurag07sharma/sih26139-qtriage-Ninth_Quadrant](https://github.com/Anurag07sharma/sih26139-qtriage-Ninth_Quadrant)
+> Smart India Hackathon | PS ID: SIH26139 | Sponsor: Egreen Quanta  
+> Team: Ninth Quadrant 
+> Repository: [https://github.com/Anurag07sharma/sih26139-qtriage-Ninth_Quadrant](https://github.com/Anurag07sharma/sih26139-qtriage-Ninth_Quadrant)
 
 ---
 
-## 📌 Executive Summary
+## Executive Summary
 
 Many severe chronic conditions—most notably **Cardiovascular Disease** and **Type 2 Diabetes**—develop silently. Standard clinical screening tools and classical machine learning models frequently overlook subtle, non-linear interactions in borderline patient vitals, leading to critical false negatives.
 
-**Q-Triage** solves this by unifying patient intake into an everyday form backed by an autonomous **Agent Council**:
+Q-Triage solves this by unifying patient intake into an everyday form backed by an autonomous **Agent Council**:
 1. **Frontline Simplicity:** Patients or clinicians enter routine vitals (BP, BMI, habits, demographics) just once for simultaneous multi-disease risk evaluation.
 2. **Autonomous Agent Council:** Rapid classical models triage clear cases instantly, while ambiguous, borderline, or conflicting cases are automatically escalated to a **Quantum Neural Network (QNN)**.
 3. **Quantum Edge:** By mapping patient vitals into quantum Hilbert states via Variational Quantum Circuits (VQCs), our quantum model uncovers complex cross-feature correlations that slip past classical models, maximizing early diagnostic recall.
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```mermaid
 flowchart TD
@@ -42,7 +42,7 @@ flowchart TD
 
 ---
 
-## 🚀 Key Innovations & Novelty
+## Key Innovations & Novelty
 
 * **3-Council Consensus Engine:** Combines the execution speed of classical gradient boosting with the expressive representational power of quantum circuits.
 * **Angle Embedding with Periodic Phase Scaling:** Scales patient inputs to $[0, \pi]$ intervals, preventing rotational phase-wrapping artifacts on the Bloch sphere and stabilizing variational parameter optimization.
@@ -51,7 +51,7 @@ flowchart TD
 
 ---
 
-## 📊 Benchmark Results
+## Benchmark Results
 
 Evaluated on clinical benchmarks (**CDC BRFSS 2015 Diabetes** & **Framingham Heart Study**):
 
@@ -64,7 +64,7 @@ Evaluated on clinical benchmarks (**CDC BRFSS 2015 Diabetes** & **Framingham Hea
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```text
 sih26139/
@@ -95,7 +95,7 @@ sih26139/
 
 ---
 
-## ⚡ Quickstart Guide
+## Quickstart Guide
 
 ### 1. Clone the Repository
 ```bash
@@ -132,12 +132,7 @@ streamlit run app.py
 
 ---
 
-## 👥 Team Ninth Quadrant
 
-* **Anurag Sharma** (Lead)
-* **Team Members:** Innovation Garage / Ninth Quadrant
-
----
 
 ## 📜 Disclaimer
 *This platform is a proof-of-concept developed for the Smart India Hackathon. It is intended for early screening support and clinical triage assistance, not as a standalone diagnostic device.*
