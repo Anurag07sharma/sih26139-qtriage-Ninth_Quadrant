@@ -134,5 +134,5 @@ streamlit run app.py
 
 
 
-## 📜 Disclaimer
+## Disclaimer
 *This platform is a proof-of-concept developed for the Smart India Hackathon. It is intended for early screening support and clinical triage assistance, not as a standalone diagnostic device.*
