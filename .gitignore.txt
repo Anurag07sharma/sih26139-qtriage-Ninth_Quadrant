@@ -1,0 +1,21 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Ignore raw data (downloaded via script)
+data/raw/
+data/quantum/
+data/processed/*.csv
+
+# Ignore temporary folders
+frontend_package/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db

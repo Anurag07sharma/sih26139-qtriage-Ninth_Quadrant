@@ -1,0 +1,671 @@
+{
+  "project": "SIH26139",
+  "download_verification": {
+    "heart_uci_combined": {
+      "rows": 1190,
+      "cols": 12,
+      "shape_matches_documented_original": true,
+      "sha256": "04e11d14886c6470fc4e347ca710136521d7184423238f28161c1d8022ce0c5d",
+      "bytes": 65160
+    },
+    "framingham": {
+      "rows": 4240,
+      "cols": 16,
+      "shape_matches_documented_original": true,
+      "sha256": "2c0e57dc0361b420becf1facec0a054af06c420eae0ae2faf0fdc8591fadb018",
+      "bytes": 191803
+    },
+    "brfss2015": {
+      "rows": 253680,
+      "cols": 22,
+      "shape_matches_documented_original": true,
+      "sha256": "a971809d0786d2d7d7f6070f83dfe8af9d860ea33a79e0e2701c8a49f78f9861",
+      "bytes": 22738151
+    },
+    "pima": {
+      "rows": 768,
+      "cols": 9,
+      "shape_matches_documented_original": true,
+      "sha256": "698c203a14aa31941d2251175330c9199f3ccdb31597abbba2a3e35416257a72",
+      "bytes": 23873
+    }
+  },
+  "datasets": {
+    "heart": {
+      "dataset": "Heart Disease Dataset (Comprehensive / 5-cohort merge)",
+      "feature_selection": {
+        "selected": [
+          "age",
+          "sex",
+          "chest_pain_type",
+          "resting_bp_s",
+          "max_heart_rate",
+          "cholesterol"
+        ],
+        "ranking": {
+          "st_slope": {
+            "mutual_info": 1.0,
+            "rf_importance": 1.0,
+            "xgb_gain": 1.0,
+            "permutation": 1.0,
+            "shap": 1.0,
+            "cv_stability": 1.0,
+            "mean_rank": 1.0
+          },
+          "chest_pain_type": {
+            "mutual_info": 2.0,
+            "rf_importance": 2.0,
+            "xgb_gain": 2.0,
+            "permutation": 2.0,
+            "shap": 2.0,
+            "cv_stability": 2.0,
+            "mean_rank": 2.0
+          },
+          "oldpeak": {
+            "mutual_info": 4.0,
+            "rf_importance": 4.0,
+            "xgb_gain": 6.0,
+            "permutation": 3.0,
+            "shap": 6.0,
+            "cv_stability": 4.0,
+            "mean_rank": 4.5
+          },
+          "max_heart_rate": {
+            "mutual_info": 5.0,
+            "rf_importance": 3.0,
+            "xgb_gain": 7.0,
+            "permutation": 7.5,
+            "shap": 5.0,
+            "cv_stability": 3.0,
+            "mean_rank": 5.0833
+          },
+          "cholesterol": {
+            "mutual_info": 6.0,
+            "rf_importance": 5.0,
+            "xgb_gain": 8.0,
+            "permutation": 6.0,
+            "shap": 4.0,
+            "cv_stability": 5.0,
+            "mean_rank": 5.6667
+          },
+          "exercise_angina": {
+            "mutual_info": 3.0,
+            "rf_importance": 7.0,
+            "xgb_gain": 3.0,
+            "permutation": 10.0,
+            "shap": 8.0,
+            "cv_stability": 6.0,
+            "mean_rank": 6.1667
+          },
+          "sex": {
+            "mutual_info": 8.0,
+            "rf_importance": 9.0,
+            "xgb_gain": 5.0,
+            "permutation": 7.5,
+            "shap": 3.0,
+            "cv_stability": 9.0,
+            "mean_rank": 6.9167
+          },
+          "fasting_blood_sugar": {
+            "mutual_info": 10.0,
+            "rf_importance": 10.0,
+            "xgb_gain": 4.0,
+            "permutation": 5.0,
+            "shap": 7.0,
+            "cv_stability": 10.0,
+            "mean_rank": 7.6667
+          },
+          "age": {
+            "mutual_info": 7.0,
+            "rf_importance": 6.0,
+            "xgb_gain": 9.0,
+            "permutation": 9.0,
+            "shap": 9.0,
+            "cv_stability": 7.0,
+            "mean_rank": 7.8333
+          },
+          "resting_bp_s": {
+            "mutual_info": 11.0,
+            "rf_importance": 8.0,
+            "xgb_gain": 10.0,
+            "permutation": 4.0,
+            "shap": 10.0,
+            "cv_stability": 8.0,
+            "mean_rank": 8.5
+          },
+          "resting_ecg": {
+            "mutual_info": 9.0,
+            "rf_importance": 11.0,
+            "xgb_gain": 11.0,
+            "permutation": 11.0,
+            "shap": 11.0,
+            "cv_stability": 11.0,
+            "mean_rank": 10.6667
+          }
+        },
+        "dropped_as_redundant": {}
+      },
+      "quantum": {
+        "n_samples": 300,
+        "dims": 6,
+        "n_qubits": 3,
+        "padded_dimensions": 8
+      },
+      "train_rows": 734,
+      "test_rows": 184,
+      "selected_features": [
+        "age",
+        "sex",
+        "chest_pain_type",
+        "resting_bp_s",
+        "max_heart_rate",
+        "cholesterol"
+      ]
+    },
+    "heart_fhs": {
+      "dataset": "Framingham Heart Study - Teaching Subset (10-year CHD risk)",
+      "feature_selection": {
+        "selected": [
+          "age",
+          "sysBP",
+          "cigsPerDay",
+          "BMI",
+          "totChol",
+          "diaBP"
+        ],
+        "ranking": {
+          "age": {
+            "mutual_info": 1.0,
+            "rf_importance": 1.0,
+            "xgb_gain": 1.0,
+            "permutation": 1.0,
+            "shap": 1.0,
+            "cv_stability": 3.0,
+            "mean_rank": 1.3333
+          },
+          "sysBP": {
+            "mutual_info": 2.0,
+            "rf_importance": 2.0,
+            "xgb_gain": 5.0,
+            "permutation": 11.0,
+            "shap": 2.0,
+            "cv_stability": 1.0,
+            "mean_rank": 3.8333
+          },
+          "BMI": {
+            "mutual_info": 5.0,
+            "rf_importance": 4.0,
+            "xgb_gain": 12.0,
+            "permutation": 8.5,
+            "shap": 4.0,
+            "cv_stability": 2.0,
+            "mean_rank": 5.9167
+          },
+          "cigsPerDay": {
+            "mutual_info": 10.0,
+            "rf_importance": 8.0,
+            "xgb_gain": 8.0,
+            "permutation": 2.0,
+            "shap": 3.0,
+            "cv_stability": 8.0,
+            "mean_rank": 6.5
+          },
+          "totChol": {
+            "mutual_info": 9.0,
+            "rf_importance": 3.0,
+            "xgb_gain": 11.0,
+            "permutation": 13.0,
+            "shap": 5.0,
+            "cv_stability": 4.0,
+            "mean_rank": 7.5
+          },
+          "education": {
+            "mutual_info": 7.0,
+            "rf_importance": 9.0,
+            "xgb_gain": 10.0,
+            "permutation": 3.0,
+            "shap": 10.0,
+            "cv_stability": 9.0,
+            "mean_rank": 8.0
+          },
+          "prevalentHyp": {
+            "mutual_info": 3.0,
+            "rf_importance": 10.0,
+            "xgb_gain": 2.0,
+            "permutation": 12.0,
+            "shap": 11.0,
+            "cv_stability": 11.0,
+            "mean_rank": 8.1667
+          },
+          "male": {
+            "mutual_info": 15.0,
+            "rf_importance": 11.0,
+            "xgb_gain": 3.0,
+            "permutation": 5.0,
+            "shap": 6.0,
+            "cv_stability": 10.0,
+            "mean_rank": 8.3333
+          },
+          "diaBP": {
+            "mutual_info": 4.0,
+            "rf_importance": 5.0,
+            "xgb_gain": 13.0,
+            "permutation": 14.0,
+            "shap": 9.0,
+            "cv_stability": 6.0,
+            "mean_rank": 8.5
+          },
+          "heartRate": {
+            "mutual_info": 11.0,
+            "rf_importance": 7.0,
+            "xgb_gain": 14.0,
+            "permutation": 7.0,
+            "shap": 7.0,
+            "cv_stability": 7.0,
+            "mean_rank": 8.8333
+          },
+          "glucose": {
+            "mutual_info": 13.0,
+            "rf_importance": 6.0,
+            "xgb_gain": 9.0,
+            "permutation": 15.0,
+            "shap": 8.0,
+            "cv_stability": 5.0,
+            "mean_rank": 9.3333
+          },
+          "BPMeds": {
+            "mutual_info": 8.0,
+            "rf_importance": 14.0,
+            "xgb_gain": 4.0,
+            "permutation": 6.0,
+            "shap": 12.0,
+            "cv_stability": 13.0,
+            "mean_rank": 9.5
+          },
+          "prevalentStroke": {
+            "mutual_info": 6.0,
+            "rf_importance": 15.0,
+            "xgb_gain": 6.0,
+            "permutation": 4.0,
+            "shap": 14.0,
+            "cv_stability": 15.0,
+            "mean_rank": 10.0
+          },
+          "diabetes": {
+            "mutual_info": 12.0,
+            "rf_importance": 13.0,
+            "xgb_gain": 7.0,
+            "permutation": 10.0,
+            "shap": 15.0,
+            "cv_stability": 14.0,
+            "mean_rank": 11.8333
+          },
+          "currentSmoker": {
+            "mutual_info": 14.0,
+            "rf_importance": 12.0,
+            "xgb_gain": 15.0,
+            "permutation": 8.5,
+            "shap": 13.0,
+            "cv_stability": 12.0,
+            "mean_rank": 12.4167
+          }
+        },
+        "dropped_as_redundant": {
+          "currentSmoker": {
+            "redundant_with": "cigsPerDay",
+            "spearman": 0.9218
+          }
+        }
+      },
+      "quantum": {
+        "n_samples": 300,
+        "dims": 6,
+        "n_qubits": 3,
+        "padded_dimensions": 8
+      },
+      "train_rows": 3392,
+      "test_rows": 848,
+      "selected_features": [
+        "age",
+        "sysBP",
+        "cigsPerDay",
+        "BMI",
+        "totChol",
+        "diaBP"
+      ]
+    },
+    "diabetes": {
+      "dataset": "Diabetes Health Indicators - CDC BRFSS 2015",
+      "feature_selection": {
+        "selected": [
+          "BMI",
+          "GenHlth",
+          "Age",
+          "HighBP",
+          "HighChol",
+          "Income",
+          "PhysHlth",
+          "Education"
+        ],
+        "ranking": {
+          "BMI": {
+            "mutual_info": 2.0,
+            "rf_importance": 1.0,
+            "xgb_gain": 5.0,
+            "permutation": 1.0,
+            "shap": 3.0,
+            "cv_stability": 1.0,
+            "mean_rank": 2.1667
+          },
+          "GenHlth": {
+            "mutual_info": 1.0,
+            "rf_importance": 3.0,
+            "xgb_gain": 2.0,
+            "permutation": 3.0,
+            "shap": 1.0,
+            "cv_stability": 4.0,
+            "mean_rank": 2.3333
+          },
+          "Age": {
+            "mutual_info": 6.0,
+            "rf_importance": 2.0,
+            "xgb_gain": 7.0,
+            "permutation": 2.0,
+            "shap": 2.0,
+            "cv_stability": 2.0,
+            "mean_rank": 3.5
+          },
+          "HighBP": {
+            "mutual_info": 3.0,
+            "rf_importance": 5.0,
+            "xgb_gain": 1.0,
+            "permutation": 4.0,
+            "shap": 4.0,
+            "cv_stability": 8.0,
+            "mean_rank": 4.1667
+          },
+          "HighChol": {
+            "mutual_info": 4.0,
+            "rf_importance": 9.0,
+            "xgb_gain": 3.0,
+            "permutation": 5.0,
+            "shap": 5.0,
+            "cv_stability": 11.0,
+            "mean_rank": 6.1667
+          },
+          "Income": {
+            "mutual_info": 8.0,
+            "rf_importance": 4.0,
+            "xgb_gain": 11.0,
+            "permutation": 7.0,
+            "shap": 6.0,
+            "cv_stability": 3.0,
+            "mean_rank": 6.5
+          },
+          "PhysHlth": {
+            "mutual_info": 7.0,
+            "rf_importance": 6.0,
+            "xgb_gain": 18.0,
+            "permutation": 6.0,
+            "shap": 11.0,
+            "cv_stability": 5.0,
+            "mean_rank": 8.8333
+          },
+          "Education": {
+            "mutual_info": 10.0,
+            "rf_importance": 7.0,
+            "xgb_gain": 15.0,
+            "permutation": 13.0,
+            "shap": 8.0,
+            "cv_stability": 6.0,
+            "mean_rank": 9.8333
+          },
+          "DiffWalk": {
+            "mutual_info": 5.0,
+            "rf_importance": 13.0,
+            "xgb_gain": 4.0,
+            "permutation": 18.0,
+            "shap": 12.0,
+            "cv_stability": 13.0,
+            "mean_rank": 10.8333
+          },
+          "MentHlth": {
+            "mutual_info": 19.0,
+            "rf_importance": 8.0,
+            "xgb_gain": 16.0,
+            "permutation": 11.0,
+            "shap": 10.0,
+            "cv_stability": 7.0,
+            "mean_rank": 11.8333
+          },
+          "Sex": {
+            "mutual_info": 16.0,
+            "rf_importance": 12.0,
+            "xgb_gain": 10.0,
+            "permutation": 20.0,
+            "shap": 7.0,
+            "cv_stability": 12.0,
+            "mean_rank": 12.8333
+          },
+          "Fruits": {
+            "mutual_info": 15.0,
+            "rf_importance": 11.0,
+            "xgb_gain": 20.0,
+            "permutation": 8.0,
+            "shap": 16.0,
+            "cv_stability": 9.0,
+            "mean_rank": 13.1667
+          },
+          "CholCheck": {
+            "mutual_info": 13.0,
+            "rf_importance": 21.0,
+            "xgb_gain": 6.0,
+            "permutation": 9.0,
+            "shap": 9.0,
+            "cv_stability": 21.0,
+            "mean_rank": 13.1667
+          },
+          "HeartDiseaseorAttack": {
+            "mutual_info": 9.0,
+            "rf_importance": 16.0,
+            "xgb_gain": 8.0,
+            "permutation": 19.0,
+            "shap": 14.0,
+            "cv_stability": 16.0,
+            "mean_rank": 13.6667
+          },
+          "Smoker": {
+            "mutual_info": 20.0,
+            "rf_importance": 10.0,
+            "xgb_gain": 13.0,
+            "permutation": 14.0,
+            "shap": 15.0,
+            "cv_stability": 10.0,
+            "mean_rank": 13.6667
+          },
+          "HvyAlcoholConsump": {
+            "mutual_info": 17.0,
+            "rf_importance": 18.0,
+            "xgb_gain": 9.0,
+            "permutation": 10.0,
+            "shap": 13.0,
+            "cv_stability": 19.0,
+            "mean_rank": 14.3333
+          },
+          "PhysActivity": {
+            "mutual_info": 11.0,
+            "rf_importance": 14.0,
+            "xgb_gain": 17.0,
+            "permutation": 15.0,
+            "shap": 19.0,
+            "cv_stability": 14.0,
+            "mean_rank": 15.0
+          },
+          "Stroke": {
+            "mutual_info": 12.0,
+            "rf_importance": 19.0,
+            "xgb_gain": 12.0,
+            "permutation": 17.0,
+            "shap": 18.0,
+            "cv_stability": 18.0,
+            "mean_rank": 16.0
+          },
+          "Veggies": {
+            "mutual_info": 18.0,
+            "rf_importance": 15.0,
+            "xgb_gain": 19.0,
+            "permutation": 21.0,
+            "shap": 17.0,
+            "cv_stability": 15.0,
+            "mean_rank": 17.5
+          },
+          "NoDocbcCost": {
+            "mutual_info": 21.0,
+            "rf_importance": 17.0,
+            "xgb_gain": 14.0,
+            "permutation": 16.0,
+            "shap": 20.0,
+            "cv_stability": 17.0,
+            "mean_rank": 17.5
+          },
+          "AnyHealthcare": {
+            "mutual_info": 14.0,
+            "rf_importance": 20.0,
+            "xgb_gain": 21.0,
+            "permutation": 12.0,
+            "shap": 21.0,
+            "cv_stability": 20.0,
+            "mean_rank": 18.0
+          }
+        },
+        "dropped_as_redundant": {}
+      },
+      "quantum": {
+        "n_samples": 300,
+        "dims": 8,
+        "n_qubits": 3,
+        "padded_dimensions": 8
+      },
+      "train_rows": 80000,
+      "test_rows": 20000,
+      "selected_features": [
+        "BMI",
+        "GenHlth",
+        "Age",
+        "HighBP",
+        "HighChol",
+        "Income",
+        "PhysHlth",
+        "Education"
+      ]
+    },
+    "diabetes_pima": {
+      "dataset": "Pima Indians Diabetes Database",
+      "feature_selection": {
+        "selected": [
+          "Glucose",
+          "BMI",
+          "Age",
+          "Insulin",
+          "DiabetesPedigreeFunction",
+          "Pregnancies",
+          "BloodPressure",
+          "SkinThickness"
+        ],
+        "ranking": {
+          "Glucose": {
+            "mutual_info": 1.0,
+            "rf_importance": 1.0,
+            "xgb_gain": 1.0,
+            "permutation": 1.0,
+            "shap": 1.0,
+            "cv_stability": 1.0,
+            "mean_rank": 1.0
+          },
+          "BMI": {
+            "mutual_info": 2.0,
+            "rf_importance": 2.0,
+            "xgb_gain": 2.0,
+            "permutation": 2.0,
+            "shap": 2.0,
+            "cv_stability": 2.0,
+            "mean_rank": 2.0
+          },
+          "Age": {
+            "mutual_info": 3.0,
+            "rf_importance": 3.0,
+            "xgb_gain": 3.0,
+            "permutation": 4.5,
+            "shap": 3.0,
+            "cv_stability": 3.0,
+            "mean_rank": 3.25
+          },
+          "Insulin": {
+            "mutual_info": 4.0,
+            "rf_importance": 5.0,
+            "xgb_gain": 4.0,
+            "permutation": 6.0,
+            "shap": 5.0,
+            "cv_stability": 5.0,
+            "mean_rank": 4.8333
+          },
+          "DiabetesPedigreeFunction": {
+            "mutual_info": 8.0,
+            "rf_importance": 4.0,
+            "xgb_gain": 5.0,
+            "permutation": 4.5,
+            "shap": 4.0,
+            "cv_stability": 4.0,
+            "mean_rank": 4.9167
+          },
+          "BloodPressure": {
+            "mutual_info": 7.0,
+            "rf_importance": 6.0,
+            "xgb_gain": 7.0,
+            "permutation": 3.0,
+            "shap": 6.0,
+            "cv_stability": 6.0,
+            "mean_rank": 5.8333
+          },
+          "Pregnancies": {
+            "mutual_info": 5.0,
+            "rf_importance": 8.0,
+            "xgb_gain": 6.0,
+            "permutation": 8.0,
+            "shap": 7.0,
+            "cv_stability": 7.0,
+            "mean_rank": 6.8333
+          },
+          "SkinThickness": {
+            "mutual_info": 6.0,
+            "rf_importance": 7.0,
+            "xgb_gain": 8.0,
+            "permutation": 7.0,
+            "shap": 8.0,
+            "cv_stability": 8.0,
+            "mean_rank": 7.3333
+          }
+        },
+        "dropped_as_redundant": {}
+      },
+      "quantum": {
+        "n_samples": 300,
+        "dims": 8,
+        "n_qubits": 3,
+        "padded_dimensions": 8
+      },
+      "train_rows": 614,
+      "test_rows": 154,
+      "selected_features": [
+        "Glucose",
+        "BMI",
+        "Age",
+        "Insulin",
+        "DiabetesPedigreeFunction",
+        "Pregnancies",
+        "BloodPressure",
+        "SkinThickness"
+      ]
+    }
+  }
+}
